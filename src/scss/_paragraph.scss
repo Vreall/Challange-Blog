@@ -1,0 +1,58 @@
+.paragraph {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Overpass", sans-serif;
+  margin: 40px 0;
+  @include desktop {
+    // margin: 0 100px;
+    align-items: flex-start;
+  }
+  &--paddingDesktopL {
+    @include desktopL {
+      margin: 0 50px;
+    }
+    @include desktopXl {
+      margin: 0 100px;
+    }
+  }
+  // &--centry {
+  //   // display: flex;
+  //   // justify-content: center;
+  //   // align-items: flex-start;
+  // }
+  &__headliner {
+    padding: 0 80px;
+    color: $VeryDarkBlackBlue;
+    text-align: center;
+    font-size: 1.5rem;
+    @include desktop {
+      text-align: left;
+      padding: 0;
+      margin-left: 20px;
+    }
+    &--whiteText {
+      color: $white;
+    }
+  }
+  &__text {
+    margin: 20px;
+    color: $textMenu;
+    line-height: 2rem;
+    text-align: center;
+    @include desktop {
+      text-align: left;
+    }
+    &--whiteText {
+      // margin: 20px 20px 80px 20px;
+      color: $white;
+      text-align: center;
+    }
+    @include desktop {
+      &--alignLeft {
+        text-align: left;
+      }
+    }
+  }
+}

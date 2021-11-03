@@ -1,0 +1,41 @@
+@import "variables";
+
+@mixin tablet {
+  @media (min-width:#{$tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+@mixin desktopL {
+  @media (min-width: #{$desktopL}) {
+    @content;
+  }
+}
+
+@mixin desktopXl {
+  @media (min-width:#{$desktopXl}) {
+    @content;
+  }
+}
+@mixin display-f-row-center-x {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+@mixin display-f-col-center-xy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@mixin display-f-col-center-y {
+  display: flex;
+  flex-direction: column;
+  //   justify-content: center;
+  align-items: center;
+}

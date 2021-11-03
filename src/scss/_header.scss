@@ -1,0 +1,73 @@
+@import 'colors';
+.header {
+	position: relative;
+	@include display-f-col-center-y;
+	padding: 150px 10px 0 10px;
+	// min-height: 70vh;
+	min-width: 100%;
+	background-image: url('/img/bg-pattern-intro.svg');
+	background-size: 350%;
+	background-repeat: no-repeat;
+	background-position-x: 35%;
+	background-position-y: 35%;
+	border-radius: 0 0 0 100px;
+	font-family: 'Overpass', sans-serif;
+	overflow: hidden;
+	@include desktop {
+		min-width: 100%;
+		
+		background-size: 220%;
+		background-position-x: 25%;
+		background-position-y: 50%;
+	}
+	@include desktopXl {
+		// min-height: 60vh;
+		min-width: 1400px;
+	}
+	&__bcg {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: $gradient;
+		z-index: -1;
+	}
+	&__headliner {
+		@include display-f-col-center-xy;
+		// margin-top: 50px;
+		padding-bottom: 10px;
+		color: $white;
+		@include tablet {
+			font-size: 2.5rem;
+		}
+		@include desktop {
+			// min-width: 900px;
+			@include display-f-row-center-x;
+		}
+	}
+	&__text {
+		@include display-f-col-center-xy;
+		margin-bottom: 50px;
+		color: $white;
+		text-align: center;
+		@include tablet {
+			margin-right: 5px;
+			font-size: 1.5rem;
+			text-align: center;
+		}
+		@include desktop {
+			@include display-f-row-center-x;
+		}
+	}
+	&__buttonsContainer {
+		@include display-f-row-center-x;
+		min-width: 300px;
+		margin-bottom: 100px;
+		@include tablet {
+			// min-width: 100%;
+		}
+	}
+}
+span {
+	margin: 0 5px;
+}

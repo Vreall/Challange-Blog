@@ -1,0 +1,56 @@
+@import 'colors';
+.footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: $VeryDarkBlackBlue;
+	border-radius: 0 100px 0 0;
+	@include desktop {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		padding: 50px;
+	}
+
+	&__linksContainer {
+		margin-bottom: 60px;
+		@include desktop {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-evenly;
+			align-items: flex-start;
+			width: 100%;
+			margin: 0;
+		}
+	}
+
+	&__links {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	&__title {
+		margin: 60px;
+		font-size: 3rem;
+		color: $White;
+		font-family: 'Ubuntu', sans-serif;
+		@include desktop {
+			margin: 40px 100px;
+		}
+	}
+	&__linkTitle {
+		margin: 40px;
+		color: $White;
+		font-family: 'Ubuntu', sans-serif;
+		font-weight: 100;
+	}
+	&__link {
+		margin: 5px;
+		color: $GrayishBlue;
+		font-family: 'Ubuntu', sans-serif;
+		text-decoration: none;
+	}
+}

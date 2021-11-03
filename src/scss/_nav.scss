@@ -1,0 +1,183 @@
+.nav {
+  position: fixed;  
+  width: 100%;
+  z-index: 100;
+  @include display-f-row-center-x;
+  top: 0;
+  width: 100%;
+  justify-content: space-between;
+  z-index: 1;
+  @include desktop {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 100px 0 100px;
+  }
+  @include desktopXl {
+    max-width: 1440px;
+  }
+  &--scrolled{
+    height: 70px;
+    background: $gradient;
+
+  }
+  &__logo {
+    margin: 50px 20px;
+    color: $white;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    @include desktop {
+    }
+  }
+  &__linksContainer {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    @include display-f-col-center-xy;
+    padding: 30px;
+    width: 90%;
+    background-color: $white;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 8px 28px -12px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 8px 28px -12px rgba(66, 68, 90, 1);
+    box-shadow: 0px 8px 28px -12px rgba(66, 68, 90, 1);
+    transform: translateX(-50%);
+    text-align: center;
+    visibility: hidden;
+    &--show {
+      visibility: visible;
+      color: $VeryDarkGrayishBlue;
+    }
+    @include desktop {
+      @include display-f-row-center-x;
+      // align-items: flex-end;
+      position: relative;
+      top: 0;
+      left: 0;
+      padding: 0;
+      width: 100%;
+      transform: none;
+      background-color: transparent;
+      box-shadow: none;
+      visibility: visible;
+    }
+  }
+  &__link {
+    padding: 10px;
+    color: $VeryDarkBlackBlue;
+   
+    font-weight: 700;
+    cursor: pointer;
+    @include desktop {
+      display: flex;
+      justify-content: flex-end;
+      color: $white;
+      font-family: "Ubuntu", sans-serif;
+    }
+    &--active {
+      color: $textMenu;
+      @include desktop {
+        color: $White;
+        text-decoration: underline;
+        font-weight: 700;
+      }
+    }
+  }
+  &__subMenuItems {
+    @include display-f-col-center-xy;
+    width: 100%;
+    max-height: 0;
+    background-color: $subMenuBgc;
+    overflow: hidden;
+    transition: max-height 0.6s;
+    // margin: 10px;
+    @include desktop {
+      position: absolute;
+      align-items: flex-start;
+      top: 50px;
+      // left: 20px;
+      padding-left: 20px;
+      // padding-right: 70px;
+      width: auto;
+      min-width: 180px;
+      border-radius: 5px;
+    }
+
+    &--show {
+      max-height: 10rem;
+    }
+  }
+  &__subMenuItem {
+    padding: 10px;
+    color: $VeryDarkBlue;
+    font-size: 1.1rem;
+    text-decoration: none;
+    cursor: pointer;
+    @include desktop {
+      padding-right: 50px;
+      font-family: "Ubuntu", sans-serif;
+      &:hover {
+        font-weight: 700;
+      }
+    }
+  }
+  &__linkContainer {
+    @include display-f-row-center-x;
+  }
+  &__arrow {
+    width: 10px;
+    height: 10px;
+    background-image: url("/img/icon-arrow-dark.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include desktop {
+      background-image: url("/img/icon-arrow-light.svg");
+    }
+    &--active {
+      transform: rotateX(180deg);
+    }
+  }
+  &__burger {
+    margin: 50px 20px;
+    width: 30px;
+    height: 20px;
+    background-image: url("/img/icon-hamburger.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    &--show {
+      background-image: url("/img/icon-close.svg");
+    }
+    @include desktop {
+      display: none;
+    }
+  }
+  &__buttonsContainer {
+    display: flex;
+    flex-direction: column;
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      padding-right: 20px;
+    }
+  }
+}
+.underline {
+  width: 100%;
+  margin: 20px 0;
+  opacity: 0.1;
+  @include desktop {
+    visibility: hidden;
+  }
+}
+.submenuContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}

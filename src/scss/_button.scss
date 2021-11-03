@@ -1,0 +1,45 @@
+// @import "colors";
+.button {
+  display: inline-block;
+  margin: 0 auto;
+  width: 140px;
+  height: 50px;
+  border-radius: 30px;
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 50px;
+
+  &--white {
+    color: $buttonTextColor_whiteBtn;
+    background: $white;
+    &:hover {
+      color: $White;
+      background: $VeryLightRed;
+    }
+  }
+  &--transparentWithBorder {
+    color: $white;
+    border: 1px solid $white;
+    &:hover {
+      color: $VeryLightRed;
+      background: $White;
+    }
+  }
+  &--gradient {
+    color: $white;
+    background: $gradient;
+    &:hover {
+      background: $VeryLightRed;
+    }
+  }
+  &--login {
+    color: hsl(207, 13%, 34%);
+    font-family: "Overpass", sans-serif;
+    @include desktop {
+      color: $white;
+      font-family: "Ubuntu", sans-serif;
+    }
+  }
+}

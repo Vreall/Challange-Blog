@@ -1,0 +1,39 @@
+$gradient: linear-gradient(140deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+$white: hsl(0, 0%, 100%);
+$paragraphColor: hsl(240, 2%, 79%);
+$buttonTextColor_whiteBtn: hsl(356, 100%, 66%);
+$subMenuBgc: hsl(240, 2%, 95%);
+$textMenu: hsl(207, 13%, 34%);
+$VeryDarkGrayishBlue: hsl(207, 13%, 34%);
+
+// ## Colors
+
+// ### Primary
+// (CTA text)
+$LightRed: hsl(356, 100%, 66%);
+// (CTA hover background)
+$VeryLightRed: hsl(355, 100%, 74%);
+// (headings)
+$VeryDarkBlue: hsl(208, 49%, 24%);
+
+// ### Neutral
+// (text)
+$White: hsl(0, 0%, 100%);
+// (footer text)
+$GrayishBlue: hsl(240, 2%, 79%);
+// (body copy)
+$textMenu: hsl(207, 13%, 34%);
+// (footer background)
+$VeryDarkBlackBlue: hsl(240, 10%, 16%);
+
+// ### Gradient
+
+// Background gradient - Intro/CTA mobile nav:
+
+$VeryLightRed: hsl(13, 100%, 72%);
+$LightRed: hsl(353, 100%, 62%);
+
+// Background gradient - body:
+
+$VeryDarkGrayBlue: hsl(237, 17%, 21%);
+$VeryDarkDesaturatedBlue: hsl(237, 23%, 32%);
